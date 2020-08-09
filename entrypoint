@@ -30,7 +30,7 @@ trap "_stop" SIGINT SIGTERM SIGHUP
 
 _log "Docker entrypoint start"
 
-routes=$(ip route | grep -v default | cut -d' ' -f1 | tr '\n' ' ') 
+routes=$(ip route | grep -v default | cut -d' ' -f1 | tr '\n' ' ')
 if [ -n "$ROUTE_CUSTOM" ]; then
     routes="$routes$ROUTE_CUSTOM"
 fi
